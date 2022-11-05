@@ -2,12 +2,13 @@ import 'promise-polyfill/src/polyfill'
 import * as FingerprintJS from '../src'
 import { errorToObject } from '../src/utils/misc'
 
+import '../src/me'
+
 type Text = string | { html: string }
 
 async function getVisitorData() {
   const fp = await FingerprintJS.load({ debug: true })
   let t= await fp.get()
-  console.log(t)
   return t
 }
 
