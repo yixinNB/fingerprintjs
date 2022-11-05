@@ -6,6 +6,14 @@ import { errorToObject } from './utils/misc'
 import loadBuiltinSources, { BuiltinComponents } from './sources'
 import getConfidence, { Confidence } from './confidence'
 
+
+// import 'promise-polyfill/src/polyfill'
+// const fp=load({debug:true})
+// let a=fp.then((value)=>value.get())
+// console.log(a)
+
+
+
 /**
  * Options for Fingerprint class loading
  */
@@ -208,3 +216,5 @@ export async function load({ delayFallback, debug, monitoring = true }: Readonly
   const getComponents = loadBuiltinSources({ debug })
   return makeAgent(getComponents, debug)
 }
+
+

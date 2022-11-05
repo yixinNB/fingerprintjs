@@ -6,7 +6,9 @@ type Text = string | { html: string }
 
 async function getVisitorData() {
   const fp = await FingerprintJS.load({ debug: true })
-  return await fp.get()
+  let t= await fp.get()
+  console.log(t)
+  return t
 }
 
 async function startPlayground() {
