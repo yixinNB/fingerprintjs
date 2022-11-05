@@ -20,7 +20,7 @@ const commonBanner = licensePlugin({
 })
 
 const commonInput = {
-  input: './src/index.ts',
+  input: './src/me.ts',
   plugins: [nodeResolvePlugin(), jsonPlugin(), typescriptPlugin(), commonBanner],
 }
 
